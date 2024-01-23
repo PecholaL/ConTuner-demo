@@ -1,6 +1,4 @@
-<p align="justify">
-We show the demo of DiffBeautifier:Fast Diffusion Model for High-Fidelity Singing Voice Beautifying
-</p>
+# DiffBeautify
 
 ## Overview
 <p align="justify">

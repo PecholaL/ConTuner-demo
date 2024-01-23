@@ -1,5 +1,5 @@
-title: Fast Diffusion Model for Singing Voice Beautifying
-# description: Xulong Zhang
+title:  DiffBeautify
+description: Fast Diffusion Model for High-Fidelity Singing Voice Beautifying with Pitch and Expressiveness Condition
 
 theme: jekyll-theme-cayman
 
