@@ -1,4 +1,4 @@
-# DiffBeautify
+# DiffBeautifier
 
 ## Overview
 <p align="justify">
