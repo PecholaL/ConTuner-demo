@@ -70,7 +70,7 @@ table {
 </style>
 
 <p>&nbsp;</p> 
-1.在我心中曾经有一个梦(zai wo xin zhong ceng jing you yi ge meng)<br>
+1. 在我心中曾经有一个梦(zai wo xin zhong ceng jing you yi ge meng)<br>
 <table>
 <!-- 	<CAPTION class="text-left">1.在我心中曾经有一个梦</CAPTION> -->
     <tr>
@@ -89,26 +89,7 @@ table {
     </tr>	
 </table>
 
-2.再没有恨，也没有了痛(zai mei you hen, ye mei you le tong)<br>
-<table>
-<!-- 	<CAPTION class="text-left">2.在日月沧桑后 你在谁身旁</CAPTION> -->
-    <tr>
-        <th></th>
-	<th> GT Amateur</th>
-        <th> GT Profession</th>
-        <th> w/o Expressiveness Enhancer</th>
-	<th> ConTuner</th>
-    </tr>
-    <tr>
-        <th> wav </th>
-	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/9diff.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/9ori.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/9p.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/9ama.wav" type="audio/mpeg"></audio> </th>
-    </tr>	
-</table>
-
-3.你总说毕业遥遥无期转眼就各奔东西(ni zong shuo bi ye yao yao wu qi zhuan yan jiu ge ben dong xi)<br>
+2. 你总说毕业遥遥无期转眼就各奔东西(ni zong shuo bi ye yao yao wu qi zhuan yan jiu ge ben dong xi)<br>
 <table>
     <tr>
         <th></th>
@@ -126,43 +107,7 @@ table {
     </tr>	
 </table>
 
-4.东边牧马，西边放羊(dong bian mu ma, xi bian fang yang)<br>
-<table>
-    <tr>
-        <th></th>
-	<th> GT Amateur</th>
-        <th> GT Profession</th>
-        <th> w/o Expressiveness Enhancer</th>
-	<th> ConTuner</th>
-    </tr>
-    <tr>
-        <th> wav </th>
-	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/6ama.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/6ori.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/6p.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/6diff.wav" type="audio/mpeg"></audio> </th>
-    </tr>	
-</table>
-
-5.生命已被牵引潮落潮涨(sheng ming yi bei qian yin chao luo chao zhang)<br>
-<table>
-    <tr>
-        <th></th>
-	<th> GT Amateur</th>
-        <th> GT Profession</th>
-        <th> w/o Expressiveness Enhancer</th>
-	<th> ConTuner</th>
-    </tr>
-    <tr>
-        <th> wav </th>
-	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/5ama.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/5ori.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/5p.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/5diff.wav" type="audio/mpeg"></audio> </th>
-    </tr>	
-</table>
-
-6.明天你是否还惦记曾经最爱哭的你(ming tian ni shi fou hai dian ji zhe ceng jing zui ai ku de ni)<br>
+3. 明天你是否还惦记曾经最爱哭的你(ming tian ni shi fou hai dian ji zhe ceng jing zui ai ku de ni)<br>
 <table>
     <tr>
         <th></th>
@@ -180,47 +125,11 @@ table {
     </tr>	
 </table>
 
-7.野辣辣的情歌就唱到了天亮(ye la la de qing ge jiu chang dao le tian liang)<br>
-<table>
-    <tr>
-        <th></th>
-	<th> GT Amateur</th>
-        <th> GT Profession</th>
-        <th> w/o Expressiveness Enhancer</th>
-	<th> ConTuner</th>
-    </tr>
-    <tr>
-        <th> wav </th>
-	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/7ama.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/7ori.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/7p.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/7diff.wav" type="audio/mpeg"></audio> </th>
-    </tr>	
-</table>
-
-8.用我们的歌换你真心笑容(yong wo men de ge huan ni zhen xin xiao rong)<br>
-<table>
-    <tr>
-        <th></th>
-	<th> GT Amateur</th>
-        <th> GT Profession</th>
-        <th> w/o Expressiveness Enhancer</th>
-	<th> ConTuner</th>
-    </tr>
-    <tr>
-        <th> wav </th>
-	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/10ama.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/10ori.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/10p.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/10diff.wav" type="audio/mpeg"></audio> </th>
-    </tr>	
-</table>
-
 
 ## English
 
 <p>&nbsp;</p> 
-9.Because when the sun shines, we’ll shine together. Told you I'll be here forever<br>
+4. Because when the sun shines, we’ll shine together. Told you I'll be here forever<br>
 <table>
     <tr>
         <th></th>
@@ -238,43 +147,7 @@ table {
     </tr>	
 </table>
 
-10.Baby cause in the dark, you can't see shiny cars<br>
-<table>
-    <tr>
-        <th></th>
-	<th> GT Amateur</th>
-        <th> GT Profession</th>
-        <th> w/o Expressiveness Enhancer</th>
-	<th> ConTuner</th>
-    </tr>
-    <tr>
-        <th> wav </th>
-	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/13ama.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/13ori.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/13p.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/13diff.wav" type="audio/mpeg"></audio> </th>
-    </tr>	
-</table>
-
-11.Together we'll mend your heart<br>
-<table>
-    <tr>
-        <th></th>
-	<th> GT Amateur</th>
-        <th> GT Profession</th>
-        <th> w/o Expressiveness Enhancer</th>
-	<th> ConTuner</th>
-    </tr>
-    <tr>
-        <th> wav </th>
-	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/16ama.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/16ori.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/16p.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/16diff.wav" type="audio/mpeg"></audio> </th>
-    </tr>	
-</table>
-
-12.I said: No one has to know what we do<br>
+5. I said, no one has to know what we do<br>
 <table>
     <tr>
         <th></th>
@@ -292,61 +165,7 @@ table {
     </tr>	
 </table>
 
-13.Wildest dreams<br>
-<table>
-    <tr>
-        <th></th>
-	<th> GT Amateur</th>
-        <th> GT Profession</th>
-        <th> w/o Expressiveness Enhancer</th>
-	<th> ConTuner</th>
-    </tr>
-    <tr>
-        <th> wav </th>
-	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/19ama.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/19ori.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/19p.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/19diff.wav" type="audio/mpeg"></audio> </th>
-    </tr>	
-</table>
-
-14.That we can baby, we can change and feel alright<br>
-<table>
-    <tr>
-        <th></th>
-	<th> GT Amateur</th>
-        <th> GT Profession</th>
-        <th> w/o Expressiveness Enhancer</th>
-	<th> ConTuner</th>
-    </tr>
-    <tr>
-        <th> wav </th>
-	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/17ama.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/17ori.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/17p.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/17diff.wav" type="audio/mpeg"></audio> </th>
-    </tr>	
-</table>
-
-15.Standin' in a nice dress Starin' at the sunset, babe<br>
-<table>
-    <tr>
-        <th></th>
-	<th> GT Amateur</th>
-        <th> GT Profession</th>
-        <th> w/o Expressiveness Enhancer</th>
-	<th> ConTuner</th>
-    </tr>
-    <tr>
-        <th> wav </th>
-	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/18ama.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/18ori.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/18p.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/18diff.wav" type="audio/mpeg"></audio> </th>
-    </tr>	
-</table>
-
-16.Said I'll always be a friend, took an oath. I'am stick it out till the end<br>
+6. Said I'll always be a friend, took an oath. I'am stick it out till the end<br>
 <table>
     <tr>
         <th></th>
