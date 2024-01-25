@@ -2,7 +2,7 @@
 
 ## Overview
 <p align="justify">
-Singing voice beautifying (SVB) is a novel task that is widely used in practical scenarios. SVB task aims to correct the pitch of the singing voice and improve the expressiveness without changing the timbre and content. The major challenge of SVB is that paired data of professional songs and amateur songs is hard to obtain and we solved it for the first time. In this paper, we propose ConTuner, an efficient diffusion model for highfidelity Singing Voice Beautifying. Since there are no paired data, diffusion model is adapted as our backbone, which is combined with modified conditions to generate our mel-spectrograms. We also reduce the number of steps of sampling t by using generator-based methods. For automatic pitch correction, we establish a mapping relationship from MIDI, spectrum envelope to pitch. To make amateur singing more expressive, we propose an expression enhancer in the latent space to convert the amateur vocal tone to the professional one. Furthermore, we produced a 40-hour singing dataset that contains original song vocals and extremely amateurish samples to promote the development of SVB. ConTuner achieves a state-of-the-art beautification effect on both English and Chinese songs. Our extensive ablation studies demonstrate that expression part and generator-based methods in ConTuner are effective.
+Singing voice beautifying (SVB) is a novel task that is widely used in practical scenarios. SVB task aims to correct the pitch of the singing voice and improve the expressiveness without changing the timbre and content. The major challenge of SVB is that paired data of professional songs and amateur songs is hard to obtain and we solved it for the first time. In this paper, we propose ConTuner, an efficient diffusion model for highfidelity Singing Voice Beautifying. Since there are no paired data, diffusion model is adapted as our backbone, which is combined with modified conditions to generate our mel-spectrograms. We also reduce the number of steps of sampling t by using generator-based methods. For automatic pitch correction, we establish a mapping relationship from MIDI, spectrum envelope to pitch. To make amateur singing more expressive, we propose an expression enhancer in the latent space to convert the amateur vocal tone to the professional one. Furthermore, we produced a 40-hour singing dataset that contains original song vocals and extremely amateurish samples to promote the development of SVB. ConTuner achieves a state-of-the-art beautification effect on both English and Chinese songs. Our extensive ablation study demonstrates that expression part and generator-based methods in ConTuner are effective.
 </p>
 
 ## Model Architecture
@@ -41,7 +41,7 @@ Singing voice beautifying (SVB) is a novel task that is widely used in practical
 <p align="center">Figure.2 The architecture of the functional digestive metabolic network.</p> -->
 
 ## Singing Audio Samples
-There are four models in total: [1] GTMel, amateur (A) and [2] professional (P) version, where we first convert ground truth audio into mel-spectrograms, and then convert the mel-spectrograms back to audio according via the vocoder. [3] Pitch Predictor, we first use the MIDI of the original singer, spectral envelope of amateur singing to predict our pitch curve. And then the predicted pitch curve, the spectral envelope of the amateur singing voice, and the aperiodic parameter of the amateur singing voice are used to synthesize the audio through the World Vocoder. [4] ConTuner, the model proposed. 
+There are four models in total: [1] GTMel, amateur (A) and [2] professional (P) version, where we first convert ground truth audio into mel-spectrograms, and then convert the mel-spectrograms back to audio according via the vocoder. [3] w/o Expressiveness Enhancer, we first use the MIDI of the original singer, spectral envelope of amateur singing to predict our pitch curve. And then the predicted pitch curve, the spectral envelope of the amateur singing voice, and the aperiodic parameter of the amateur singing voice are used to synthesize the audio through the World Vocoder. [4] ConTuner, the model proposed. 
 
 *All four models have a slight electrical sound because of our vocoder Griffin-Lim. Please pay more attention to the pitch and expressiveness of songs.*
 
@@ -77,7 +77,7 @@ table {
         <th></th>
 	<th> GT Amateur</th>
         <th> GT Profession</th>
-        <th> Pitch Predictor</th>
+        <th> w/o Expressiveness Enhancer</th>
 	<th> ConTuner</th>
     </tr>
     <tr>
@@ -96,7 +96,7 @@ table {
         <th></th>
 	<th> GT Amateur</th>
         <th> GT Profession</th>
-        <th> Pitch Predictor</th>
+        <th> w/o Expressiveness Enhancer</th>
 	<th> ConTuner</th>
     </tr>
     <tr>
@@ -114,7 +114,7 @@ table {
         <th></th>
 	<th> GT Amateur</th>
         <th> GT Profession</th>
-        <th> Pitch Predictor</th>
+        <th> w/o Expressiveness Enhancer</th>
 	<th> ConTuner</th>
     </tr>
     <tr>
@@ -132,7 +132,7 @@ table {
         <th></th>
 	<th> GT Amateur</th>
         <th> GT Profession</th>
-        <th> Pitch Predictor</th>
+        <th> w/o Expressiveness Enhancer</th>
 	<th> ConTuner</th>
     </tr>
     <tr>
@@ -150,7 +150,7 @@ table {
         <th></th>
 	<th> GT Amateur</th>
         <th> GT Profession</th>
-        <th> Pitch Predictor</th>
+        <th> w/o Expressiveness Enhancer</th>
 	<th> ConTuner</th>
     </tr>
     <tr>
@@ -168,7 +168,7 @@ table {
         <th></th>
 	<th> GT Amateur</th>
         <th> GT Profession</th>
-        <th> Pitch Predictor</th>
+        <th> w/o Expressiveness Enhancer</th>
 	<th> ConTuner</th>
     </tr>
     <tr>
@@ -186,7 +186,7 @@ table {
         <th></th>
 	<th> GT Amateur</th>
         <th> GT Profession</th>
-        <th> Pitch Predictor</th>
+        <th> w/o Expressiveness Enhancer</th>
 	<th> ConTuner</th>
     </tr>
     <tr>
@@ -204,7 +204,7 @@ table {
         <th></th>
 	<th> GT Amateur</th>
         <th> GT Profession</th>
-        <th> Pitch Predictor</th>
+        <th> w/o Expressiveness Enhancer</th>
 	<th> ConTuner</th>
     </tr>
     <tr>
@@ -226,7 +226,7 @@ table {
         <th></th>
 	<th> GT Amateur</th>
         <th> GT Profession</th>
-        <th> Pitch Predictor</th>
+        <th> w/o Expressiveness Enhancer</th>
 	<th> ConTuner</th>
     </tr>
     <tr>
@@ -244,7 +244,7 @@ table {
         <th></th>
 	<th> GT Amateur</th>
         <th> GT Profession</th>
-        <th> Pitch Predictor</th>
+        <th> w/o Expressiveness Enhancer</th>
 	<th> ConTuner</th>
     </tr>
     <tr>
@@ -262,7 +262,7 @@ table {
         <th></th>
 	<th> GT Amateur</th>
         <th> GT Profession</th>
-        <th> Pitch Predictor</th>
+        <th> w/o Expressiveness Enhancer</th>
 	<th> ConTuner</th>
     </tr>
     <tr>
@@ -280,7 +280,7 @@ table {
         <th></th>
 	<th> GT Amateur</th>
         <th> GT Profession</th>
-        <th> Pitch Predictor</th>
+        <th> w/o Expressiveness Enhancer</th>
 	<th> ConTuner</th>
     </tr>
     <tr>
@@ -298,7 +298,7 @@ table {
         <th></th>
 	<th> GT Amateur</th>
         <th> GT Profession</th>
-        <th> Pitch Predictor</th>
+        <th> w/o Expressiveness Enhancer</th>
 	<th> ConTuner</th>
     </tr>
     <tr>
@@ -316,7 +316,7 @@ table {
         <th></th>
 	<th> GT Amateur</th>
         <th> GT Profession</th>
-        <th> Pitch Predictor</th>
+        <th> w/o Expressiveness Enhancer</th>
 	<th> ConTuner</th>
     </tr>
     <tr>
@@ -334,7 +334,7 @@ table {
         <th></th>
 	<th> GT Amateur</th>
         <th> GT Profession</th>
-        <th> Pitch Predictor</th>
+        <th> w/o Expressiveness Enhancer</th>
 	<th> ConTuner</th>
     </tr>
     <tr>
@@ -352,7 +352,7 @@ table {
         <th></th>
 	<th> GT Amateur</th>
         <th> GT Profession</th>
-        <th> Pitch Predictor</th>
+        <th> w/o Expressiveness Enhancer</th>
 	<th> ConTuner</th>
     </tr>
     <tr>
