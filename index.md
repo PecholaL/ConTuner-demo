@@ -51,7 +51,7 @@ table {
 </style>
 
 <p>&nbsp;</p> 
-1. 在我心中曾经有一个梦(zai wo xin zhong ceng jing you yi ge meng)<br>
+I. 在我心中曾经有一个梦(zai wo xin zhong ceng jing you yi ge meng)<br>
 <table>
 <!-- 	<CAPTION class="text-left">1.在我心中曾经有一个梦</CAPTION> -->
     <tr>
@@ -70,7 +70,7 @@ table {
     </tr>	
 </table>
 
-2. 你总说毕业遥遥无期转眼就各奔东西(ni zong shuo bi ye yao yao wu qi zhuan yan jiu ge ben dong xi)<br>
+II. 你总说毕业遥遥无期转眼就各奔东西(ni zong shuo bi ye yao yao wu qi zhuan yan jiu ge ben dong xi)<br>
 <table>
     <tr>
         <th></th>
@@ -88,7 +88,7 @@ table {
     </tr>	
 </table>
 
-3. 明天你是否还惦记曾经最爱哭的你(ming tian ni shi fou hai dian ji zhe ceng jing zui ai ku de ni)<br>
+III. 明天你是否还惦记曾经最爱哭的你(ming tian ni shi fou hai dian ji zhe ceng jing zui ai ku de ni)<br>
 <table>
     <tr>
         <th></th>
@@ -110,7 +110,7 @@ table {
 ## English
 
 <p>&nbsp;</p> 
-4. Because when the sun shines, we’ll shine together. Told you I'll be here forever<br>
+IV. Because when the sun shines, we’ll shine together. Told you I'll be here forever<br>
 <table>
     <tr>
         <th></th>
@@ -128,7 +128,7 @@ table {
     </tr>	
 </table>
 
-5. I said, no one has to know what we do<br>
+V. I said, no one has to know what we do<br>
 <table>
     <tr>
         <th></th>
@@ -146,7 +146,7 @@ table {
     </tr>	
 </table>
 
-6. Said I'll always be a friend, took an oath. I'am stick it out till the end<br>
+VI. Said I'll always be a friend, took an oath. I'am stick it out till the end<br>
 <table>
     <tr>
         <th></th>
