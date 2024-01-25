@@ -6,26 +6,7 @@ Singing voice beautifying (SVB) is a novel task that is widely used in practical
 </p>
 
 ## Model Architecture
-<!-- <center class="half">
-    <img src="assets/image/fig1.jpg" width="300"/>
-    <img src="assets/image/fig2.jpg" width="300"/>
-</center>       <p>&nbsp;</p> 
-<p align="center">Figure.1 The architecture of the functional digestive metabolic network,</p> -->
-
-<table>
-    <tr>
-        <td ><center><img src="assets/image/Architecture.png"/> </center></td>
-<!--         <td ><center><img src="assets/image/fig2.jpg"/> </center></td> -->
-    </tr>
-<!--     <tr>
-		<th> (A) ConTuner </th>
-		<th> (B) Mel Spectrogram Denoiser </th>
-<!--         <td>(A) DMN </center></td>
-        <td >(B) FDMN </center> </td> -->
-<!--     </tr>  -->
-
-	
-</table>
+<center><img src="assets/image/Architecture.png"/> </center>
 <p align="center">Figure.1 The overall architecture of ConTuner.</p>
 <!-- 	(B) The detailed architecture of the Mel Spectrogram Denoiser.</p> -->
 
@@ -41,7 +22,7 @@ Singing voice beautifying (SVB) is a novel task that is widely used in practical
 <p align="center">Figure.2 The architecture of the functional digestive metabolic network.</p> -->
 
 ## Singing Audio Samples
-There are four models in total: [1] GTMel, amateur (A) and [2] professional (P) version, where we first convert ground truth audio into mel-spectrograms, and then convert the mel-spectrograms back to audio according via the vocoder. [3] w/o Expressiveness Enhancer, we first use the MIDI of the original singer, spectral envelope of amateur singing to predict our pitch curve. And then the predicted pitch curve, the spectral envelope of the amateur singing voice, and the aperiodic parameter of the amateur singing voice are used to synthesize the audio through the World Vocoder. [4] ConTuner, the model proposed. 
+There are four models in total: [1] GTMel, amateur (A) and [2] professional (P) version, where we first convert ground truth audio into mel-spectrograms, and then convert the mel-spectrograms back to audio according via the vocoder. [3] *w/o* Expressiveness Enhancer, remove expressive enhancer from ConTuner, which means that *pitch predictor* takes part in the beautifying. [4] ConTuner, the model proposed. 
 
 *All four models have a slight electrical sound because of our vocoder Griffin-Lim. Please pay more attention to the pitch and expressiveness of songs.*
 
