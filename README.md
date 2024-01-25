@@ -1,2 +1,2 @@
-# DiffBeautifier-demo
-demo page of DiffBeautifier
+# ConTuner-demo
+demo page of ConTuner

@@ -1,8 +1,8 @@
-# DiffBeautifier
+# ConTuner
 
 ## Overview
 <p align="justify">
-Singing voice beautifying (SVB) is a novel task that is widely used in practical scenarios. SVB task aims to correct the pitch of the singing voice and improve the expressiveness without changing the timbre and content. The major challenge of SVB is that paired data of professional songs and amateur songs is hard to obtain and we solved it for the first time. In this paper, we propose DiffBeautifier, an efficient diffusion model for highfidelity Singing Voice Beautifying. Since there are no paired data, diffusion model is adapted as our backbone, which is combined with modified conditions to generate our mel-spectrograms. We also reduce the number of steps of sampling t by using generator-based methods. For automatic pitch correction, we establish a mapping relationship from MIDI, spectrum envelope to pitch. To make amateur singing more expressive, we propose an expression enhancer in the latent space to convert the amateur vocal tone to the professional one. Furthermore, we produced a 40-hour singing dataset that contains original song vocals and extremely amateurish samples to promote the development of SVB. DiffBeautifier achieves a state-of-the-art beautification effect on both English and Chinese songs. Our extensive ablation studies demonstrate that expression part and generator-based methods in DiffBeautifier are effective.
+Singing voice beautifying (SVB) is a novel task that is widely used in practical scenarios. SVB task aims to correct the pitch of the singing voice and improve the expressiveness without changing the timbre and content. The major challenge of SVB is that paired data of professional songs and amateur songs is hard to obtain and we solved it for the first time. In this paper, we propose ConTuner, an efficient diffusion model for highfidelity Singing Voice Beautifying. Since there are no paired data, diffusion model is adapted as our backbone, which is combined with modified conditions to generate our mel-spectrograms. We also reduce the number of steps of sampling t by using generator-based methods. For automatic pitch correction, we establish a mapping relationship from MIDI, spectrum envelope to pitch. To make amateur singing more expressive, we propose an expression enhancer in the latent space to convert the amateur vocal tone to the professional one. Furthermore, we produced a 40-hour singing dataset that contains original song vocals and extremely amateurish samples to promote the development of SVB. ConTuner achieves a state-of-the-art beautification effect on both English and Chinese songs. Our extensive ablation studies demonstrate that expression part and generator-based methods in ConTuner are effective.
 </p>
 
 ## Model Architecture
@@ -18,7 +18,7 @@ Singing voice beautifying (SVB) is a novel task that is widely used in practical
 <!--         <td ><center><img src="assets/image/fig2.jpg"/> </center></td> -->
     </tr>
 <!--     <tr>
-		<th> (A) DiffBeautifier </th>
+		<th> (A) ConTuner </th>
 		<th> (B) Mel Spectrogram Denoiser </th>
 <!--         <td>(A) DMN </center></td>
         <td >(B) FDMN </center> </td> -->
@@ -26,7 +26,7 @@ Singing voice beautifying (SVB) is a novel task that is widely used in practical
 
 	
 </table>
-<p align="center">Figure.1 The overall architecture of DiffBeautifier.</p>
+<p align="center">Figure.1 The overall architecture of ConTuner.</p>
 <!-- 	(B) The detailed architecture of the Mel Spectrogram Denoiser.</p> -->
 
 
@@ -41,7 +41,7 @@ Singing voice beautifying (SVB) is a novel task that is widely used in practical
 <p align="center">Figure.2 The architecture of the functional digestive metabolic network.</p> -->
 
 ## Singing Audio Samples
-There are four models in total: [1] GTMel, amateur (A) and [2] professional (P) version, where we first convert ground truth audio into mel-spectrograms, and then convert the mel-spectrograms back to audio according via the vocoder. [3] Pitch Predictor, we first use the MIDI of the original singer, spectral envelope of amateur singing to predict our pitch curve. And then the predicted pitch curve, the spectral envelope of the amateur singing voice, and the aperiodic parameter of the amateur singing voice are used to synthesize the audio through the World Vocoder. [4] DiffBeautifier, the model proposed. 
+There are four models in total: [1] GTMel, amateur (A) and [2] professional (P) version, where we first convert ground truth audio into mel-spectrograms, and then convert the mel-spectrograms back to audio according via the vocoder. [3] Pitch Predictor, we first use the MIDI of the original singer, spectral envelope of amateur singing to predict our pitch curve. And then the predicted pitch curve, the spectral envelope of the amateur singing voice, and the aperiodic parameter of the amateur singing voice are used to synthesize the audio through the World Vocoder. [4] ConTuner, the model proposed. 
 
 *All four models have a slight electrical sound because of our vocoder Griffin-Lim. Please pay more attention to the pitch and expressiveness of songs.*
 
@@ -78,14 +78,14 @@ table {
 	<th> GT Amateur</th>
         <th> GT Profession</th>
         <th> Pitch Predictor</th>
-	<th> DiffBeautifier</th>
+	<th> ConTuner</th>
     </tr>
     <tr>
         <th> wav </th>
-	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/8diff.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/8ori.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/8p.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/8ama.wav" type="audio/mpeg"></audio> </th>
+	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/8diff.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/8ori.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/8p.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/8ama.wav" type="audio/mpeg"></audio> </th>
     </tr>	
 </table>
 
@@ -97,14 +97,14 @@ table {
 	<th> GT Amateur</th>
         <th> GT Profession</th>
         <th> Pitch Predictor</th>
-	<th> DiffBeautifier</th>
+	<th> ConTuner</th>
     </tr>
     <tr>
         <th> wav </th>
-	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/9diff.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/9ori.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/9p.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/9ama.wav" type="audio/mpeg"></audio> </th>
+	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/9diff.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/9ori.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/9p.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/9ama.wav" type="audio/mpeg"></audio> </th>
     </tr>	
 </table>
 
@@ -115,14 +115,14 @@ table {
 	<th> GT Amateur</th>
         <th> GT Profession</th>
         <th> Pitch Predictor</th>
-	<th> DiffBeautifier</th>
+	<th> ConTuner</th>
     </tr>
     <tr>
         <th> wav </th>
-	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/12ama.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/12ori.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/12p.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/12diff.wav" type="audio/mpeg"></audio> </th>
+	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/12ama.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/12ori.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/12p.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/12diff.wav" type="audio/mpeg"></audio> </th>
     </tr>	
 </table>
 
@@ -133,14 +133,14 @@ table {
 	<th> GT Amateur</th>
         <th> GT Profession</th>
         <th> Pitch Predictor</th>
-	<th> DiffBeautifier</th>
+	<th> ConTuner</th>
     </tr>
     <tr>
         <th> wav </th>
-	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/6ama.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/6ori.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/6p.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/6diff.wav" type="audio/mpeg"></audio> </th>
+	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/6ama.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/6ori.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/6p.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/6diff.wav" type="audio/mpeg"></audio> </th>
     </tr>	
 </table>
 
@@ -151,14 +151,14 @@ table {
 	<th> GT Amateur</th>
         <th> GT Profession</th>
         <th> Pitch Predictor</th>
-	<th> DiffBeautifier</th>
+	<th> ConTuner</th>
     </tr>
     <tr>
         <th> wav </th>
-	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/5ama.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/5ori.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/5p.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/5diff.wav" type="audio/mpeg"></audio> </th>
+	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/5ama.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/5ori.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/5p.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/5diff.wav" type="audio/mpeg"></audio> </th>
     </tr>	
 </table>
 
@@ -169,14 +169,14 @@ table {
 	<th> GT Amateur</th>
         <th> GT Profession</th>
         <th> Pitch Predictor</th>
-	<th> DiffBeautifier</th>
+	<th> ConTuner</th>
     </tr>
     <tr>
         <th> wav </th>
-	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/11ama.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/11ori.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/11p.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/11diff.wav" type="audio/mpeg"></audio> </th>
+	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/11ama.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/11ori.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/11p.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/11diff.wav" type="audio/mpeg"></audio> </th>
     </tr>	
 </table>
 
@@ -187,14 +187,14 @@ table {
 	<th> GT Amateur</th>
         <th> GT Profession</th>
         <th> Pitch Predictor</th>
-	<th> DiffBeautifier</th>
+	<th> ConTuner</th>
     </tr>
     <tr>
         <th> wav </th>
-	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/7ama.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/7ori.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/7p.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/7diff.wav" type="audio/mpeg"></audio> </th>
+	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/7ama.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/7ori.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/7p.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/7diff.wav" type="audio/mpeg"></audio> </th>
     </tr>	
 </table>
 
@@ -205,14 +205,14 @@ table {
 	<th> GT Amateur</th>
         <th> GT Profession</th>
         <th> Pitch Predictor</th>
-	<th> DiffBeautifier</th>
+	<th> ConTuner</th>
     </tr>
     <tr>
         <th> wav </th>
-	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/10ama.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/10ori.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/10p.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/10diff.wav" type="audio/mpeg"></audio> </th>
+	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/10ama.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/10ori.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/10p.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/10diff.wav" type="audio/mpeg"></audio> </th>
     </tr>	
 </table>
 
@@ -227,14 +227,14 @@ table {
 	<th> GT Amateur</th>
         <th> GT Profession</th>
         <th> Pitch Predictor</th>
-	<th> DiffBeautifier</th>
+	<th> ConTuner</th>
     </tr>
     <tr>
         <th> wav </th>
-	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/14ama.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/14ori.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/14p.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/14diff.wav" type="audio/mpeg"></audio> </th>
+	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/14ama.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/14ori.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/14p.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/14diff.wav" type="audio/mpeg"></audio> </th>
     </tr>	
 </table>
 
@@ -245,14 +245,14 @@ table {
 	<th> GT Amateur</th>
         <th> GT Profession</th>
         <th> Pitch Predictor</th>
-	<th> DiffBeautifier</th>
+	<th> ConTuner</th>
     </tr>
     <tr>
         <th> wav </th>
-	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/13ama.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/13ori.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/13p.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/13diff.wav" type="audio/mpeg"></audio> </th>
+	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/13ama.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/13ori.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/13p.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/13diff.wav" type="audio/mpeg"></audio> </th>
     </tr>	
 </table>
 
@@ -263,14 +263,14 @@ table {
 	<th> GT Amateur</th>
         <th> GT Profession</th>
         <th> Pitch Predictor</th>
-	<th> DiffBeautifier</th>
+	<th> ConTuner</th>
     </tr>
     <tr>
         <th> wav </th>
-	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/16ama.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/16ori.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/16p.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/16diff.wav" type="audio/mpeg"></audio> </th>
+	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/16ama.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/16ori.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/16p.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/16diff.wav" type="audio/mpeg"></audio> </th>
     </tr>	
 </table>
 
@@ -281,14 +281,14 @@ table {
 	<th> GT Amateur</th>
         <th> GT Profession</th>
         <th> Pitch Predictor</th>
-	<th> DiffBeautifier</th>
+	<th> ConTuner</th>
     </tr>
     <tr>
         <th> wav </th>
-	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/20ama.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/20ori.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/20p.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/20diff.wav" type="audio/mpeg"></audio> </th>
+	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/20ama.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/20ori.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/20p.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/20diff.wav" type="audio/mpeg"></audio> </th>
     </tr>	
 </table>
 
@@ -299,14 +299,14 @@ table {
 	<th> GT Amateur</th>
         <th> GT Profession</th>
         <th> Pitch Predictor</th>
-	<th> DiffBeautifier</th>
+	<th> ConTuner</th>
     </tr>
     <tr>
         <th> wav </th>
-	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/19ama.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/19ori.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/19p.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/19diff.wav" type="audio/mpeg"></audio> </th>
+	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/19ama.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/19ori.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/19p.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/19diff.wav" type="audio/mpeg"></audio> </th>
     </tr>	
 </table>
 
@@ -317,14 +317,14 @@ table {
 	<th> GT Amateur</th>
         <th> GT Profession</th>
         <th> Pitch Predictor</th>
-	<th> DiffBeautifier</th>
+	<th> ConTuner</th>
     </tr>
     <tr>
         <th> wav </th>
-	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/17ama.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/17ori.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/17p.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/17diff.wav" type="audio/mpeg"></audio> </th>
+	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/17ama.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/17ori.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/17p.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/17diff.wav" type="audio/mpeg"></audio> </th>
     </tr>	
 </table>
 
@@ -335,14 +335,14 @@ table {
 	<th> GT Amateur</th>
         <th> GT Profession</th>
         <th> Pitch Predictor</th>
-	<th> DiffBeautifier</th>
+	<th> ConTuner</th>
     </tr>
     <tr>
         <th> wav </th>
-	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/18ama.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/18ori.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/18p.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/18diff.wav" type="audio/mpeg"></audio> </th>
+	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/18ama.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/18ori.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/18p.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/18diff.wav" type="audio/mpeg"></audio> </th>
     </tr>	
 </table>
 
@@ -353,14 +353,14 @@ table {
 	<th> GT Amateur</th>
         <th> GT Profession</th>
         <th> Pitch Predictor</th>
-	<th> DiffBeautifier</th>
+	<th> ConTuner</th>
     </tr>
     <tr>
         <th> wav </th>
-	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/15ama.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/15ori.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/15p.wav" type="audio/mpeg"></audio> </th>
-        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/DiffBeautifier/15diff.wav" type="audio/mpeg"></audio> </th>
+	<th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/15ama.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/15ori.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/15p.wav" type="audio/mpeg"></audio> </th>
+        <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="assets/audios/ConTuner/15diff.wav" type="audio/mpeg"></audio> </th>
     </tr>	
 </table>
 
